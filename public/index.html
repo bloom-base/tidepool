@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidepool - Marine Data Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">🌊 Tidepool</h1>
+                <p class="subtitle">Bring the ocean to your screen. Explore marine ecosystems, track whale migrations, monitor ocean health.</p>
+            </div>
+        </header>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Fetching ocean data...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="error" class="error" style="display: none;"></div>
+
+        <!-- Main Dashboard -->
+        <main id="dashboard" class="dashboard">
+            <!-- Fish Species Section -->
+            <section class="section">
+                <h2 class="section-title">🐟 Fish Species</h2>
+                <p class="section-desc">Diverse species of fish from FishBase, a global fish species database</p>
+                <div id="fish-container" class="cards-grid">
+                    <!-- Fish species will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Biodiversity Section -->
+            <section class="section">
+                <h2 class="section-title">🌊 Marine Biodiversity</h2>
+                <p class="section-desc">Recent observations from the Ocean Biodiversity Information System (OBIS)</p>
+                
+                <!-- Stats Cards -->
+                <div id="stats-container" class="stats-grid">
+                    <!-- Statistics will be loaded here -->
+                </div>
+
+                <!-- Observations List -->
+                <div id="biodiversity-container" class="observations-list">
+                    <!-- Observations will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Ocean Weather Section -->
+            <section class="section">
+                <h2 class="section-title">🌡️ Ocean Weather & Conditions</h2>
+                <p class="section-desc">Ocean wave heights, temperatures, and conditions from multiple regions</p>
+                <div id="weather-container" class="weather-grid">
+                    <!-- Weather data will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Data Sources -->
+            <section class="section sources">
+                <h2 class="section-title">📊 Data Sources</h2>
+                <div class="sources-grid">
+                    <div class="source-card">
+                        <h3>FishBase</h3>
+                        <p>Global fish species database with 35,000+ species</p>
+                        <a href="https://fishbase.ropensci.org" target="_blank">Visit API →</a>
+                    </div>
+                    <div class="source-card">
+                        <h3>OBIS</h3>
+                        <p>Ocean Biodiversity Information System with 100M+ observations</p>
+                        <a href="https://obis.org" target="_blank">Visit API →</a>
+                    </div>
+                    <div class="source-card">
+                        <h3>Open-Meteo</h3>
+                        <p>Marine weather data with forecasts and historical data</p>
+                        <a href="https://open-meteo.com" target="_blank">Visit API →</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>🌍 Tidepool - Exploring Earth's Ocean 🐋</p>
+            <p class="footer-note">Data sources: FishBase, OBIS, Open-Meteo | Last updated: <span id="last-update">--:--:--</span></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
